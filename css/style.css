@@ -431,7 +431,33 @@
 
 
 /*** Testimonial ***/
-.testimonial-carousel {
+
+.testimonial-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.testimonial-item {
+    flex: 0 0 auto; /* Prevents items from stretching */
+    width: 50%; /* Adjust as needed */
+    margin-right: 20px; /* Space between items */
+}
+
+
+.testimonialContainer {
+    background-image: url('img/hero1.jpg'); /* Path to your image */
+    background-size: cover; /* Cover the entire container */
+    background-position: center; /* Center the image in the container */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+.testimonialButton {
+    margin-top:50px;
+}
+
+
+/* .testimonial-carousel {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
 }
@@ -476,7 +502,7 @@
 .testimonial-carousel .owl-nav .owl-prev:hover,
 .testimonial-carousel .owl-nav .owl-next:hover {
     background: var(--dark);
-}
+} */
 
 
 /*--------------------------------------------------------------

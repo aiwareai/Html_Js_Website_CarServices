@@ -55,6 +55,30 @@
     });
 
 
+    // Testimonials slider
+    let slideIndex = 0;
+    const slider = document.querySelector('.testimonial-slider');
+    const slides = document.querySelectorAll('.testimonial-item');
+    const totalSlides = slides.length;
+    
+    function getSlideWidth() {
+        return slides[0].offsetWidth; // Assuming all slides have the same width
+    }
+    
+    function nextSlide() {
+        slideIndex = (slideIndex + 1) % totalSlides;
+        slider.scrollLeft = getSlideWidth() * slideIndex;
+    }
+    
+    function prevSlide() {
+        slideIndex = (slideIndex - 1 + totalSlides) % totalSlides;
+        slider.scrollLeft = getSlideWidth() * slideIndex;
+    }
+    
+    // Optional: Auto-slide
+    setInterval(nextSlide, 2000); // Change slide every 3 seconds
+
+
     // Testimonials carousel
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
